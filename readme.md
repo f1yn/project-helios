@@ -41,9 +41,9 @@ These glasses are meant to be made with PLA. I usually prefer PETG for mechanica
 
 I've included screenshots of what a typical plate assembly should look like:
 
-![Plate1](./docs/plate1.png)
+![Plate1](./docs/v3-plate1.png)
 
-![Plate2](./docs//plate2.png)
+![Plate2](./docs/v3-plate2.png)
 
 ### No STLs or STEPs?
 
@@ -59,13 +59,15 @@ Handing out STL/STEP files without a user actually doing what's needed for their
 
 > A video walking through how to do this will be coming soon!
 
-![CAD Profile](./docs/profile.png)
+![CAD Profile](./docs/v3-profile.png)
 
 ### Configuring
 
 #### Parameters
 
 The FreeCAD (1.0+) file has many parameters. Here's what most of them do. The most important parameters will be bold, and the rest are configurable depending on what you intend to do with them.
+
+![CAD Profile](./docs/v3-params.png)
 
 > Any parameters labeled (comp) are computed via equations, and aren't meant to bne configurable. If a parameter isn't listed below, assume it's not used.
 
