@@ -4,7 +4,7 @@
 - Friction-fit mechanism devised
 - Not the best. The hinge worked fine, but any pressure from the sides of the glasses would cause the glasses to dismantle
 
-![v1](./docs/v1-preview.png)
+![v1](./docs/v1-profile.png)
 
 # Version 2 (inaccessible)
 

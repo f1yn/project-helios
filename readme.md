@@ -7,17 +7,19 @@
 
 ## Why?
 
-Short: I wanted glasses that were fully modular, and wouldn't be hard to repair or maintain myself. I also wanted glasses that I could fully customize, and parameterize in case I wanted to change any aspects of the design later.
+**Short:** I wanted glasses that were fully modular, and wouldn't be hard to repair or maintain myself. I also wanted glasses that I could fully customize, and parameterize in case I wanted to change any aspects of the design later.
 
-Long: One of the staples of my personal appearance are round, dual colored glasses. Late last year, my staple pair of glasses started to wear down and deteriorate at the hinge level. After trying to repair them with a heat gun, I realized that this ordeal might be fruitless.
+**Long:**
+
+One of the staples of my personal appearance are round, dual colored glasses. Late last year, my staple pair of glasses started to wear down and deteriorate at the hinge level. After trying to repair them with a heat gun, I realized that this ordeal might be fruitless.
 
 I thought I was smart, and had a few backup pairs of these frames that I ordered a few months after these first arrived. What I didn't anticipate was that, whoever designed and manufactured the original frames had ruined the manufacturing process. The tolerances were different, and heating up the frames to insert the lenses caused the frames to snap where the two colors would meet.
 
-After reflecting on this, I realized I could do this myself. Not only could I make my own frames, I could design it in a way where - as long as I could source round lenses - I could manufacture these glasses any way I'd like.
+After reflecting on this, I realized I could do this myself. Not only could I make my own frames, I could design it in a way where - as long as I could source round lenses I could manufacture these glasses any way I'd like.
 
 ## What sets these apart
 
-- Fully parametric. Every measurement of these glasses can be modified, including tolerances, temple lengths, and even how strong you want the interconnects to be.
+- Fully parametric. Every measurement of these glasses can be modified, including tolerances, temple lengths, screw sizing, dimension, and even how strong you want the interconnects to be.
 - Design only requires two brass fittings for screws, everything else is friction and mechanically secure
 - Fully modular. You can swap out parts of the glasses on a whim.
 - Optimized for printing. Using the benefits of fiber-like printing mechanics, these frames are more rugged than any other frame on the marker.
@@ -31,23 +33,19 @@ After reflecting on this, I realized I could do this myself. Not only could I ma
 
 ## Licence
 
-These glasses use the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en) licence. You can redistribute the files, but any changes made to the glasses that alter their behaviour is meant to be upstreamed. Please use responsibly.
+These glasses use the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en) licence. You can redistribute the files, but any changes made to the glasses that alter their behaviour are meant to be upstream. Please use responsibly.
 
 ## Getting started
 
-These glasses are meant to be made with PLA. I usually prefer PETG for mechanical parts, but I noted along each stage of the prototyping phase that PETG does not handle tight tolerances very well (which is a must for glasses).
+> I'll be hoping to streamline this process using a new tool I'm making, but most details are available below
+
+**These glasses are meant to be made with PLA.** I usually prefer PETG for mechanical parts, but I noted along each stage of the prototyping phase that PETG does not handle tight tolerances very well (which is a must for glasses). I also noted that most PETGs I have don't tolerate friction-fit as elegantly.
 
 **You will need a pair of calipers to measure your own lenses, and adjust your temple length if needed!**
 
-I've included screenshots of what a typical plate assembly should look like:
-
-![Plate1](./docs/v3-plate1.png)
-
-![Plate2](./docs/v3-plate2.png)
-
 ### No STLs or STEPs?
 
-No. Glasses might not seem very complicated, but durable glasses that work best for:
+**No.** Glasses might not seem very complicated, but durable glasses that work best for:
 
 - your printer (and slicer)
 - your specific lenses
@@ -55,17 +53,30 @@ No. Glasses might not seem very complicated, but durable glasses that work best 
 
 Are infact, _complicated._
 
-Handing out STL/STEP files without a user actually doing what's needed for their specific pair of glasses is a liability, but the process isn't too hard. Each person will have unique lenses and shapes for their face
+Handing out STL/STEP files without a user actually doing what's needed for their specific pair of glasses is a liability, but the process isn't too hard. Each person will have unique lenses and shapes for their face, that won't be fully reflected with the default sizing.
 
 > A video walking through how to do this will be coming soon!
 
-![CAD Profile](./docs/v3-profile.png)
+### Build plate layout
+
+I've included screenshots of what a typical plate assembly should look like:
+
+![Plate1](./docs/v3-plate1.png)
+![Plate2](./docs/v3-plate2.png)
+
+### Sourcing lenses
+
+This design expects fully round lenses. Given it's a CAD file, you can change the shape yourself, but fully round lenses are usually very affordable and easy to source.
+
+[Here's where I source mine.](https://www.kits.ca/glasses/GL00474/Hagglund.html)
 
 ### Configuring
 
+![CAD Profile](./docs/v3-profile.png)
+
 #### Parameters
 
-The FreeCAD (1.0+) file has many parameters. Here's what most of them do. The most important parameters will be bold, and the rest are configurable depending on what you intend to do with them.
+The [FreeCAD](https://www.freecad.org/) (1.0+) file has many parameters. Here's what most of them do. The most important parameters will be bold, and the rest are configurable depending on what you intend to do with them.
 
 ![CAD Profile](./docs/v3-params.png)
 
@@ -116,6 +127,10 @@ The FreeCAD (1.0+) file has many parameters. Here's what most of them do. The mo
 - `acc_eye_cover_inner_pad` - How much distance between the lense cover and the frame
 - `acc_eye_cover_thickness` - How the
 
-#### Slicer settings
+#### Print settings
 
-0.2 layer height works best, and ensure it's PLA. Higher temp should be favored if your printer is decent at tolerances. If it's not, a lower temp will work better - but you'll have worse friction fit.
+- 0.4 nozzle is best
+- 0.2mm layer height works best
+- Reduced fan speed if your printer is known to print at a medium speed. Helps encourage better layer adhesion.
+- PLA/PLA+ should be preferred.
+- Higher temp should be favored if your printer is decent at tolerances. If it's not, a lower temp will work better - but you'll have a worse friction fit.
