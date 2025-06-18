@@ -27,6 +27,8 @@ After reflecting on this, I realized I could do this myself. Not only could I ma
 
 ## Example
 
+### v3 (stable)
+
 ![Example1](./docs/v3-example.jpg)
 ![Example2](./docs/v3-example2.jpg)
 ![Example3](./docs/v3-example3.jpg)
